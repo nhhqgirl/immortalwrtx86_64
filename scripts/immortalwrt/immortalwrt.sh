@@ -6,7 +6,6 @@ pushd package/community
 # Add openwrt-packages
 git clone --depth=1 https://github.com/xuanranran/openwrt-package openwrt-package
 git clone --depth=1 https://github.com/xuanranran/rely openwrt-rely
-git clone --depth=1 https://github.com/immortalwrt/wwan-packages wwan-packages
 chmod 755 openwrt-package/luci-app-onliner/root/usr/share/onliner/setnlbw.sh
 popd
 
@@ -26,7 +25,7 @@ popd
 sed -i 's/\/bin\/ash/\/usr\/bin\/zsh/g' package/base-files/files/etc/passwd
 
 # Modify default IP
-sed -i 's/192.168.1.1/192.168.11.1/g' package/base-files/files/bin/config_generate
+sed -i 's/192.168.1.1/192.168.81.1/g' package/base-files/files/bin/config_generate
 sed -i "s/ImmortalWrt/OpenWrt/g" package/base-files/files/bin/config_generate
 
 # 修改开源站地址
